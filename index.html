@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="중국 지방정부의 1인 기업(OPC, One-Person Company) 육성 정책·운영 사례·창업자 실태 조사 (2026년 11월 기준)">
+<title>중국 1인 기업 육성 리포트</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap">
+<style>
+/* Layout: single reading column (max 880px), navy brand header, wide tables in scroll boxes. Cofoundary Brand System: navy #050B16, brand blue #1E70FF, Plus Jakarta Sans + JetBrains Mono, Pretendard for Korean */
+:root{ --bg:#F8FAFC; --surface:#FFFFFF; --ink:#050B16; --muted:#4A5768; --line:#E2E8F0; --soft:#F1F5F9; --accent:#1E70FF; --accent-soft:#E8F0FF; --navy:#050B16; --on-navy:#F8FAFC; --on-navy-2:#8E9CAE; --navy-accent:#4D8DFF; --glow:rgba(30,112,255,.3); --warn:#9A6200; --warn-soft:#FFF6E5; --stop:#C2362F; --stop-soft:#FDEEEE; --ok:#15803D; --ok-soft:#E7F6EC; --bar1:#C9DCFF; --bar1-ink:#0B2A5C; --bar2:#7FAEFF; --bar2-ink:#05214D; --bar3:#1E70FF; --bar3-ink:#FFFFFF;
+  --f-display:"Plus Jakarta Sans","Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  --f-body:"Pretendard Variable",Pretendard,"Apple SD Gothic Neo","Malgun Gothic","Plus Jakarta Sans",system-ui,sans-serif;
+  --f-num:"JetBrains Mono",ui-monospace,"SFMono-Regular",Menlo,monospace; --f-mono:var(--f-num);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){ --bg:#000000; --surface:#050B16; --ink:#FFFFFF; --muted:#8E9CAE; --line:#1A2433; --soft:#0A1220; --accent:#4D8DFF; --accent-soft:#0B1A33; --navy:#050B16; --on-navy:#FFFFFF; --on-navy-2:#8E9CAE; --navy-accent:#4D8DFF; --glow:rgba(30,112,255,.3); --warn:#F0C36A; --warn-soft:#2A2010; --stop:#FF8F87; --stop-soft:#2E1414; --ok:#4ADE80; --ok-soft:#0E2617; --bar1:#16325E; --bar1-ink:#C9DCFF; --bar2:#2B5DB8; --bar2-ink:#FFFFFF; --bar3:#6FA2FF; --bar3-ink:#050B16; color-scheme:dark }}
+:root[data-theme="dark"]{ --bg:#000000; --surface:#050B16; --ink:#FFFFFF; --muted:#8E9CAE; --line:#1A2433; --soft:#0A1220; --accent:#4D8DFF; --accent-soft:#0B1A33; --navy:#050B16; --on-navy:#FFFFFF; --on-navy-2:#8E9CAE; --navy-accent:#4D8DFF; --glow:rgba(30,112,255,.3); --warn:#F0C36A; --warn-soft:#2A2010; --stop:#FF8F87; --stop-soft:#2E1414; --ok:#4ADE80; --ok-soft:#0E2617; --bar1:#16325E; --bar1-ink:#C9DCFF; --bar2:#2B5DB8; --bar2-ink:#FFFFFF; --bar3:#6FA2FF; --bar3-ink:#050B16; color-scheme:dark }
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15.5px;line-height:1.7;letter-spacing:-0.01em;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:40px 72px}
+.wrap{max-width:880px;margin:0 auto;display:flex;flex-direction:column;gap:48px}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;line-height:1.3;margin:0}
+h1{font-weight:800;letter-spacing:-0.02em;font-size:clamp(28px,5vw,40px);line-height:1.25}
+h2{font-weight:700;font-size:22px}
+h3{font-weight:700;font-size:15.5px}
+p{margin:0;max-width:72ch}
+section{display:flex;flex-direction:column;gap:16px;min-width:0}
+ul,ol{margin:0;padding-left:1.3em;display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-family:var(--f-num);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.meta{color:var(--muted);font-size:14px}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+header.brand{display:flex;flex-direction:column;gap:12px;background:var(--navy);color:var(--on-navy);border:1px solid var(--line);border-radius:16px;padding:36px 32px;
+  background-image:radial-gradient(60% 90% at 90% 0%,var(--glow),transparent 70%)}
+header.brand .eyebrow{color:var(--navy-accent)}
+header.brand .meta,header.brand .legend{color:var(--on-navy-2)}
+header.brand a{color:var(--navy-accent)}
+.note{background:var(--warn-soft);color:var(--ink);border-radius:10px;padding:12px 16px;font-size:14px}
+.note b{color:var(--warn)}
+header.brand .note{background:rgba(255,255,255,.06);color:var(--on-navy);border:1px solid rgba(240,195,106,.45)}
+header.brand .note b{color:#F0C36A}
+.tbl{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14px}
+th,td{text-align:left;vertical-align:top;padding:11px 14px;border-bottom:1px solid var(--line)}
+th{font-size:12.5px;color:var(--muted);font-weight:500;background:var(--soft)}
+tr:last-child td{border-bottom:0}
+td:first-child{font-weight:600;white-space:nowrap}
+.pill,.tag{display:inline-block;font-size:12px;padding:1px 9px;border-radius:999px;border:1px solid var(--line);white-space:nowrap;vertical-align:1px}
+.p-new{color:var(--accent);border-color:var(--accent)}
+.p-keep{color:var(--muted)}
+.p-check{color:var(--warn);border-color:var(--warn)}
+a{color:var(--accent)}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+footer{color:var(--muted);font-size:12.5px;border-top:1px solid var(--line);padding-top:20px}
+.lede{font-size:17px}
+.t-src{color:var(--stop);border-color:var(--stop);background:var(--stop-soft)}
+.t-sec{color:var(--warn);border-color:var(--warn);background:var(--warn-soft)}
+.t-low{color:var(--muted);background:var(--soft)}
+.legend{display:flex;flex-wrap:wrap;gap:10px 18px;font-size:13px;color:var(--muted)}
+.summary{background:var(--surface);border:1px solid var(--line);border-radius:10px;border-top:3px solid var(--accent);padding:24px;display:flex;flex-direction:column;gap:14px}
+.summary ol{gap:10px}
+.layers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.layer{background:var(--surface);border:1px solid var(--line);border-radius:10px;border-top:3px solid var(--accent);padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.layer b{font-family:var(--f-display);color:var(--accent)}
+.layer small{color:var(--muted);font-size:13px}
+.drivers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.driver{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px 18px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.driver p{font-size:14px;color:var(--muted)}
+.driver.ai{border-color:var(--accent);background:var(--accent-soft)}
+.cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.case{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.case ul{font-size:14px}
+.bar{display:flex;height:36px;border-radius:8px;overflow:hidden;font-size:13px;font-weight:600;font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.bar span{display:flex;align-items:center;padding:0 10px;white-space:nowrap;overflow:hidden}
+.b1{background:var(--bar1);color:var(--bar1-ink)} .b2{background:var(--bar2);color:var(--bar2-ink)} .b3{background:var(--bar3);color:var(--bar3-ink)}
+.barkey i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.barkey .k1{background:var(--bar1)} .barkey .k2{background:var(--bar2)} .barkey .k3{background:var(--bar3)}
+.barkey{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13.5px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;border-top:3px solid var(--accent);padding:16px 18px;min-width:0}
+.stat .num{font-size:22px;display:block;color:var(--accent);font-weight:500}
+.stat small{color:var(--muted);font-size:13px}
+.callout{background:var(--navy);color:var(--on-navy);border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.callout b{color:var(--navy-accent)}
+.callout a{color:var(--navy-accent)}
+.impl ol{gap:12px}
+.impl li b{color:var(--accent)}
+.sources{font-size:13px;color:var(--muted)}
+.sources details{border-top:1px solid var(--line);padding-block:10px}
+.sources summary{cursor:pointer;font-weight:600;color:var(--ink)}
+.sources ul{margin-top:8px;gap:4px}
+@media (max-width:680px){
+  header.brand{padding:28px 20px}
+  .layers,.drivers,.cases,.stats{grid-template-columns:1fr}
+  .bar span{font-size:11.5px;padding:0 6px}
+}
+</style>
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+
+<div class="wrap">
+
+<header class="brand">
+  <span class="eyebrow">벤치마크 리서치 · 솔로 코파운더</span>
+  <h1>중국 1인 기업(OPC) 육성 리포트</h1>
+  <p class="meta">2026년 11월 기준 · 공개 자료 웹 조사 · 금액은 지역 발표 기준이며 실제 집행 여부는 별도</p>
+  <div class="legend">
+    <span><span class="tag t-src">원문 확인</span> 정부 원문·공식 보도</span>
+    <span><span class="tag t-sec">2차 자료</span> 언론·운영사 자료</span>
+    <span><span class="tag t-low">신뢰 낮음</span> 출처 불명확·홍보성</span>
+  </div>
+</header>
+
+<section class="summary">
+  <h2>한눈에</h2>
+  <ol>
+    <li>중국은 AI로 혼자 운영하는 회사를 <b>OPC(One-Person Company)</b>라 부르며, 2026년 들어 20개 성에서 100건이 넘는 지원 정책을 냈습니다.</li>
+    <li>핵심은 개인에게 현금을 주는 게 아니라 <b>입주 공간(OPC 커뮤니티)</b>을 만들고 거기에 AI 사용비 쿠폰·임대료 면제·일감·지분투자를 묶어 공급하는 방식입니다.</li>
+    <li>AI가 "혼자서도 가능"하게 만들었고, 정부는 이를 <b>청년 실업·AI 국가 전략·남는 연산 인프라·지방 성과 경쟁</b>의 해법으로 채택했습니다.</li>
+    <li>창업자 절반 이상이 월 7,000위안 미만이고, 가장 큰 고민은 <b>고객 확보</b>입니다. 커뮤니티 공실과 보조금 의존도 문제로 지적됩니다.</li>
+    <li>시사점: 중국 모델의 빈칸(경력자, 고객 연결, 첫 매출)이 솔로 코파운더가 노리는 자리와 겹칩니다.</li>
+  </ol>
+</section>
+
+<section>
+  <span class="eyebrow">배경</span>
+  <h2>왜 지금, 왜 이렇게 공격적인가</h2>
+  <p>AI가 직접 원인이지만, AI만으로는 정부의 속도를 설명하지 못합니다. 기술 변화가 기존 과제 여러 개를 한 번에 푸는 수단으로 보였기 때문입니다.</p>
+  <div class="drivers">
+    <div class="driver ai"><h3>AI: 혼자서도 가능해짐</h3><p>개발·디자인·고객 응대를 AI가 대신. 창업자의 75%가 비기술 출신. 2026년 AI 에이전트 열풍이 정책 출시를 앞당김. <span class="tag t-sec">2차 자료</span></p></div>
+    <div class="driver"><h3>① 청년 실업</h3><p>2026년 대졸자 약 <span class="num">1,270만</span> 명(역대 최대), 16~24세 실업률 8월 <span class="num">18.9%</span>. "일자리 대신 스스로 회사가 되게". <span class="tag t-src">원문 확인</span></p></div>
+    <div class="driver"><h3>② 국가 AI 전략</h3><p>국무원 「'인공지능+' 행동 의견」(2025.8)의 "지능 원생 기업". 1인 회사를 그 최소 단위로 보는 건 지방·업계 해석. 2026.9 공업정보화부 계획이 1인 회사를 처음 명시. <span class="tag t-src">원문 확인</span></p></div>
+    <div class="driver"><h3>③ 남는 연산 인프라</h3><p>2023~24년 대거 지은 지능형 연산센터 가동률 약 <span class="num">20~30%</span>. 연산 쿠폰은 남는 자원을 수요와 잇는 장치이기도 함(정책 설계에서 추론). <span class="tag t-sec">2차 자료</span></p></div>
+    <div class="driver"><h3>④ 지방 성과 경쟁</h3><p>중앙은 방향만, 실행은 지방. "커뮤니티 몇 곳, 입주 몇 곳"이 눈에 보이는 실적이라 비슷한 정책이 쏟아짐. <span class="tag t-sec">2차 자료</span></p></div>
+    <div class="driver"><h3>⑤ 제도 정비</h3><p>2024.7 신 회사법으로 1인 주식회사 허용 등 정리. 단, 1인 유한회사 1개 제한은 유지되고, 재산 분리를 증명 못 하면 연대 책임. <span class="tag t-src">원문 확인</span></p></div>
+  </div>
+  <div class="callout">
+    <h3>2015년 창업 붐과 닮은 점</h3>
+    <p>2015년 "대중창업·만중창신" 때도 정부가 창업 공간을 대량으로 만들고 보조금을 풀었고, 이후 공실과 보조금 노리기가 문제가 됐습니다. 지금도 구조가 비슷합니다. 다른 점은 AI 덕분에 1인이 실제로 매출을 낼 가능성이 훨씬 커졌다는 것입니다. <span class="tag t-low">일반 지식, 별도 검증 안 함</span></p>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">정책 구조</span>
+  <h2>지원은 세 겹으로 쌓입니다</h2>
+  <div class="layers">
+    <div class="layer"><b>앞단 · 무료</b><span>입주 공간, 3개월치 AI 사용비, 등록 편의</span><small>누구나 들어오게</small></div>
+    <div class="layer"><b>중간 · 성과 연동</b><span>인정 심사를 통과하면 보조 비율과 한도 상승</span><small>될 팀을 고르게</small></div>
+    <div class="layer"><b>뒷단 · 지분</b><span>정부·커뮤니티 펀드의 지분투자</span><small>성공의 몫을 나누게</small></div>
+  </div>
+  <p>돈의 흐름도 특징적입니다. 베이징은 쿠폰을 <b>커뮤니티 운영사가 분기마다 대신 신청</b>해 입주 기업에 나눠 줍니다. 정부는 창업자 대신 운영사를 관리하고, 운영사는 성과에 따라 별도 포상을 받습니다.</p>
+</section>
+
+<section>
+  <span class="eyebrow">원문 조항</span>
+  <h2>지역별 주요 조항</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>지역</th><th>핵심 조항</th><th>눈여겨볼 설계</th><th>근거</th></tr></thead>
+    <tbody>
+      <tr><td>상하이 린강</td><td>AI 사용비(연산·데이터·모델·도구) 최대 <span class="num">80%</span> 보조, 대학생 창업 <span class="num">+20%</span>, 연 최대 <span class="num">30만</span> 위안. 오픈소스 도구 공개 시 최대 <span class="num">100만</span> 위안</td><td>"우수 OPC"를 100점 전문가 심사로 인정(준법·기술·성장성·파급 효과, 60점 이상). AI 실사용 증빙 요구. 공유 좌석 주소 등록 시범</td><td><span class="tag t-src">원문 확인</span></td></tr>
+      <tr><td>쑤저우 공업원구</td><td>10억 위안 청년 창업 펀드군, 프로젝트당 최대 <span class="num">2,000만</span> 위안 정책성 지분투자. OPC 전용 대출 장려</td><td>OPC 정의: AI 도움으로 개인이 연구개발부터 고객 서비스까지 전 과정 수행</td><td><span class="tag t-src">원문 확인</span></td></tr>
+      <tr><td>베이징시</td><td>입주 기업에 3개월 무료 자원 패키지(모델·연산·데이터, 기업당 최대 <span class="num">10만</span> 위안). 커뮤니티당 연 최대 <span class="num">1,000만</span> 위안, 우수 커뮤니티 최대 <span class="num">200만</span> 위안</td><td>운영사 경유 지급. "야간 학교", "가속 캠프" 등 동행 지원 요구. 연내 커뮤니티 10곳, 기업 500곳</td><td><span class="tag t-src">원문 확인</span></td></tr>
+      <tr><td>베이징 각 구</td><td>하이뎬 모델비 <span class="num">50%</span>(연 최대 200만), 퉁저우 <span class="num">30%</span>, 차오양 최대 500만 위안 포상</td><td>같은 시 안에서도 구마다 중복 경쟁</td><td><span class="tag t-src">원문 확인</span></td></tr>
+      <tr><td>광둥성</td><td>2028년까지 커뮤니티 100곳·대표 기업 1,000곳·인재 1만 명. 6개 분야 18개 과제</td><td>일감 목록 "장면 풀"(숏폼, 전자상거래, 지식 콘텐츠, 소프트웨어). 고급 인재 인정, 홍콩·마카오·해외 인재 우대</td><td><span class="tag t-src">원문 확인</span></td></tr>
+      <tr><td>선전 룽강·룽화</td><td>룽강: 3개월 무료 연산, 모델비 최대 100만, 시드 지분투자 최대 <span class="num">1,000만</span>, 해커톤 최대 50만. 룽화: 연산 쿠폰 최대 300만, AI 과제 100건 공개 모집</td><td>입주 조건(업계 자료): 매출이 있으면 AI 관련 매출 <span class="num">50%</span> 이상</td><td><span class="tag t-sec">의견 수렴안</span></td></tr>
+      <tr><td>중앙 공업정보화부</td><td>「AI 중소기업 창업 지원 계획(2026–2028)」: 1인 회사·슈퍼 개인을 "포용적으로 지원"</td><td>통일 보조금이나 기준 없음. 지방에 위임</td><td><span class="tag t-src">원문 확인</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <span class="eyebrow">운영 사례</span>
+  <h2>육성 공간은 이렇게 굴러갑니다</h2>
+  <div class="cases">
+    <div class="case"><h3>항저우 Honghub(鸿鹄汇) <span class="tag t-sec">2차 자료</span></h3><ul>
+      <li>2025.9 시작. 신청 2,000건 이상, 합격률 <span class="num">4%</span> 미만</li>
+      <li>"삼무" 원칙: 무조건 5만 달러, 수시 입주, 분야 제한 없음</li>
+      <li>지분을 받지 않는다고 보도됨. 구 정부가 공간과 분기별 성장 펀드를 댐</li>
+      <li>1인 회사 운영 도구 "OPC-OS"를 자체 제품화</li></ul></div>
+    <div class="case"><h3>청두 룽수(蓉数) <span class="tag t-sec">2차 자료</span></h3><ul>
+      <li>180일 무료, 좌석·연산·데이터 무상</li>
+      <li><b>3개월마다 평가 → 알림 → 경고 → 퇴출</b></li>
+      <li>졸업하면 연장하거나 유료로 계속 입주</li></ul></div>
+    <div class="case"><h3>베이징 이좡 모수(模数) <span class="tag t-low">신뢰 낮음</span></h3><ul>
+      <li>AI 커뮤니티 단체가 운영</li>
+      <li>2년간 독립 개발자 1만 명, 고성장 OPC 200곳 목표</li>
+      <li>처음 3개월 무료, 첫해 75% 할인</li></ul></div>
+    <div class="case"><h3>베이징 펑타이 진둥 <span class="tag t-src">원문 확인</span></h3><ul>
+      <li>선발 기준 두 가지: AI·문화 콘텐츠 관련이거나 AI로 보조 가능, 온라인으로 수익화 가능</li>
+      <li>"디지털 직원" 설치·사용 교육(AI로 고객 응대, 디자인, 개발)</li></ul></div>
+  </div>
+  <p><b>운영사 수익 구조</b>(업계 자료): 기본 서비스 수입 10~30%, 나머지는 부가 서비스·주문 중개 수수료·자체 펀드 지분(프로젝트당 5~50만 위안, 지분 5~20%). <span class="tag t-low">신뢰 낮음</span></p>
+  <p><b>민간 교육 시장</b>: "14일 실전 캠프 + 2개월 동행" 형태의 유료 강좌가 많습니다(포지셔닝 → 상품 설계 → 고객 유입 → 수익화). 품질은 확인하기 어렵습니다. <span class="tag t-low">신뢰 낮음</span></p>
+</section>
+
+<section>
+  <span class="eyebrow">창업자 실태</span>
+  <h2>설문으로 본 1인 창업자</h2>
+  <p class="meta">Honghub 「2026 1인 회사 인사이트 리포트」: 설문 1,500건 이상 + 인터뷰 100시간 이상. 운영사 자체 조사라 편향 가능성이 있습니다. <span class="tag t-sec">2차 자료</span></p>
+  <h3>월 매출 분포</h3>
+  <div class="bar" role="img" aria-label="검증 단계 52.4%, 지속 운영 37.1%, 월 10만 달러 이상 10.5%">
+    <span class="b1" style="width:52.4%">52.4%</span><span class="b2" style="width:37.1%">37.1%</span><span class="b3" style="width:10.5%">10.5%</span>
+  </div>
+  <div class="barkey"><span><i class="k1"></i>검증 단계 · 월 1,000달러(약 7,000위안) 미만</span><span><i class="k2"></i>지속 운영 단계</span><span><i class="k3"></i>월 10만 달러 이상</span></div>
+  <div class="stats">
+    <div class="stat"><span class="num">75%</span><small>비기술 출신 (운영 직무 출신 26%)</small></div>
+    <div class="stat"><span class="num">50%+</span><small>"고객을 어떻게 찾을지"가 가장 큰 고민</small></div>
+    <div class="stat"><span class="num">80%+</span><small>AI 비용 지출, 20% 이상은 월 200달러 초과</small></div>
+  </div>
+  <p>감정 키워드는 불안 11%, 의심 8%, 외로움 7%. 주 수익 모델은 구독(44%).</p>
+  <div class="callout">
+    <h3>푸단대 야오젠화 외 보고서 <span class="tag t-src">원문 확인</span></h3>
+    <p>《工会理论研究》 2026년 4호. 정성 분석 위주이며 표본 수는 밝히지 않았습니다.</p>
+    <ul>
+      <li>창업자 유형: 캠퍼스 창업형, <b>기업 경력 전환형</b>, 연구·기술형, 콘텐츠형, 전통 사업 업그레이드형</li>
+      <li>문제: "제품은 있는데 주문이 없다". 재무제표가 없어 투자 유치가 어려움. 연산 비용 상승</li>
+      <li>저자 제언: "좌석과 보조금을 주는 방식"에서 <b>"주문을 주고 생태계를 만드는 방식"</b>으로</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <span class="eyebrow">부작용</span>
+  <h2>드러나는 문제</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>문제</th><th>내용</th><th>근거</th></tr></thead>
+    <tbody>
+      <tr><td>커뮤니티 공실</td><td>베이징·상하이·쑤저우·항저우 커뮤니티 좌석 약 <span class="num">30%</span> 공실 보도</td><td><span class="tag t-low">원출처 미확인</span></td></tr>
+      <tr><td>보조금 의존</td><td>보조금이 끊기면 약 30% 이탈. 입주율을 채우려 AI 비중이 낮은 업체를 받은 사례</td><td><span class="tag t-low">원출처 미확인</span></td></tr>
+      <tr><td>정책 획일화</td><td>20개 성 106개 정책이 대부분 보조금·공간 위주</td><td><span class="tag t-sec">2차 자료</span></td></tr>
+      <tr><td>공급 과잉</td><td>"만드는 능력은 남고 고객을 찾는 능력은 부족". 같은 고객을 놓고 비슷한 회사가 몰림</td><td><span class="tag t-sec">2차 자료</span></td></tr>
+      <tr><td>졸업 경로 부재</td><td>대부분 들여오는 것만 설계, 졸업·전환·인수 연결 경로는 거의 없음</td><td><span class="tag t-sec">2차 자료</span></td></tr>
+      <tr><td>생존율</td><td>"10% 미만", "1년 내 80% 실패" 수치가 돌지만 원출처 확인 못 함</td><td><span class="tag t-low">신뢰 낮음</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="impl">
+  <span class="eyebrow">시사점</span>
+  <h2>솔로 코파운더에 주는 의미</h2>
+  <ol>
+    <li><b>대상이 중국 모델의 빈칸입니다.</b> 중국은 청년·공간·AI 비용에 집중합니다. 업계 경력이 있는 직장인(기업 경력 전환형)은 소수지만 고객을 찾는 능력이 가장 강한 집단입니다.</li>
+    <li><b>도착점을 "첫 매출"로 둔 방향이 맞습니다.</b> 절반 넘게 월 7,000위안 미만이고 최대 고민이 고객 확보입니다. 중국 정부도 "주문을 주는" 쪽으로 옮겨 가고 있습니다.</li>
+    <li><b>일감 목록을 만들 수 있습니다.</b> 광둥의 "장면 풀"처럼, 기존 참가 기업 대표들의 "해결하고 싶은 문제" 목록을 기업 매칭용 목록으로 키울 수 있습니다.</li>
+    <li><b>선발·진급 심사 기준</b>: 린강의 100점 심사(준법·기술·성장성·파급 효과)와 AI 실사용 증빙 방식을 본과정 선발이나 후속 단계 진입 심사에 응용할 수 있습니다.</li>
+    <li><b>중간 평가와 퇴출 단계</b>: 청두의 3개월 평가 → 알림 → 경고 → 퇴출 구조를 12주 과정 중간 점검에 쓸 수 있습니다.</li>
+    <li><b>지분은 별도 펀드로</b>: 중국도 지분투자는 정부·커뮤니티 펀드가 합니다. 운영 주체가 직접 지분을 받을 수 있는지 법적 요건 확인이 먼저입니다.</li>
+    <li><b>커뮤니티가 가치입니다.</b> 외로움과 불안이 상위 감정입니다. 동기 모임과 코치의 날카로운 질문은 AI가 대신하지 못하는 부분입니다.</li>
+    <li><b>반면교사</b>: 공간·보조금 위주는 공실과 의존으로 이어졌습니다. 자원을 공간보다 고객 연결과 실제 결제 증빙에 씁니다.</li>
+  </ol>
+</section>
+
+<section class="sources">
+  <h2 style="font-size:1.1rem">출처</h2>
+  <details><summary>정책 원문·공식 보도</summary><ul>
+    <li><a href="https://www.lingang.gov.cn/erroritem/2026-03-26/33C15782-22F4-7C16-B767-365C6D4EC692.pdf">린강 「슈퍼 개인 경제」 조치 원문 PDF</a> · <a href="https://www.sh-hitech.com/qtfc/22366.html">전문 재게재</a> · <a href="https://www.shio.gov.cn/TrueCMS//shxwbgs/ywts/content/0f230595-ff97-4a0c-b249-432e7d8df2c5.htm">마이크로 주소 등록</a></li>
+    <li><a href="https://www.suzhou.gov.cn/szsrmzf/zyzct/202601/c398b4409e4c4933aa23f8cb62ee61bd/files/683718c2fea745df957fe3776039f3f9.doc">쑤저우 공업원구 조치 원문</a> · <a href="https://www.21jingji.com/article/20260320/herald/e414e73bb7d487f542b0bc9938a84b7c.html">21경제</a></li>
+    <li><a href="https://www.beijing.gov.cn/zhengce/zhengcefagui/202606/t20260622_4710194.html">베이징시 행동방안</a> · <a href="https://jxj.beijing.gov.cn/jxdt/gzdt/202607/t20260722_4778061.html">"1231" 자원 지원</a> · <a href="https://www.bjhd.gov.cn/ztzx/2026/opc/">하이뎬</a> · <a href="https://beijing.qianlong.com/2026/0525/8673024.shtml">퉁저우</a> · <a href="https://www.bjnews.com.cn/detail/1779884156129529.html">차오양</a> · <a href="https://www.bjft.gov.cn/fengtaishibao/resfile/2026-06-22/03/ftb-20260622-003.pdf">펑타이 시보</a></li>
+    <li><a href="https://amr.sz.gov.cn/xxgk/qt/ztlm/opcfwzq/zcwj/content/post_12694570.html">광둥성 행동방안 원문</a> · <a href="https://news.qq.com/rain/a/20260316A064BM00">텐센트 전문</a></li>
+    <li><a href="http://sz.people.com.cn/n2/2026/0310/c202846-41520149.html">선전 룽강 "룽샤 10조" (인민망)</a> · <a href="https://politics.gmw.cn/2026-03/09/content_38635629.htm">광명망</a></li>
+    <li><a href="https://www.news.cn/tech/20260909/519bc0d2d7fd4d44854159fc8f79cb1b/c.html">공업정보화부 계획 (신화망)</a> · <a href="https://m.thepaper.cn/newsDetail_forward_34022351">펑파이</a></li>
+    <li><a href="https://www.news.cn/tech/20260309/eafd7f32545f4251838f58e987d9b101/c.html">신화망: 1인 회사 가속 육성</a> · <a href="http://finance.people.com.cn/n1/2026/0708/c1004-40755994.html">인민망: OPC 용어 표준</a> · <a href="https://en.people.cn/n3/2026/0528/c90000-20461543.html">People's Daily</a></li>
+  </ul></details>
+  <details><summary>창업자 설문·연구</summary><ul>
+    <li><a href="https://www.hzzx.gov.cn/cshz/content/2026-04/10/content_9204499.htm">항저우 정협: 1,500건 설문</a> · <a href="https://hznews.hangzhou.com.cn/chengshi/content/2026-04/11/content_9204717.htm">항저우뉴스: 절반이 월 7,000위안 미만</a></li>
+    <li><a href="https://www.jfdaily.com/wx/detail.do?id=1148807">야오젠화 외 OPC 조사 보고서 (상관뉴스)</a></li>
+    <li><a href="https://www.pressreader.com/china/science-and-technology-industry-of-china/20260820/282011859208303">클라우드 인큐베이션 논문 (PressReader)</a></li>
+  </ul></details>
+  <details><summary>운영 사례</summary><ul>
+    <li><a href="https://finance.sina.com.cn/roll/2026-01-23/doc-inhiicfs1955902.shtml">Honghub OPC-OS</a> · <a href="https://www.hzsc.com.cn/content/content_9862978.html">상청 뉴스</a> · <a href="https://www.ehangzhou.gov.cn/2026-08/20/c_298750.htm">eHangzhou</a></li>
+    <li><a href="https://m.sohu.com/a/1006566888_122014422">청두 룽수 (소후)</a> · <a href="https://caifuhao.eastmoney.com/news/20260415093310880234280">베이징 10대 커뮤니티</a> · <a href="https://www.0rg.cn/web/2026-04-13-opc-beijing.html">이좡 모수 (2차)</a></li>
+    <li><a href="https://www.0rg.cn/web/2026-06-01-opc-club.html">운영사 수익 구조 (신뢰 낮음)</a> · <a href="https://ipzhihu.com/NewsDetail/8128853.html">졸업과 퇴장</a> · <a href="https://www.sohu.com/a/1082141469_122898679">선전 각 구 비교</a></li>
+  </ul></details>
+  <details><summary>배경·비판</summary><ul>
+    <li><a href="https://www.scmp.com/economy/china-economy/article/3333652/china-braces-record-127-million-graduates-entering-tight-job-market-2026">SCMP: 대졸자 1,270만 명</a> · <a href="https://tradingeconomics.com/china/youth-unemployment-rate/news/584561">청년 실업률</a> · <a href="https://jamestown.org/youth-unemployment-resists-easy-fixes/">Jamestown</a></li>
+    <li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/chinas-ai-data-center-boom-goes-bust-rush-leaves-billions-of-dollars-in-idle-infrastructure">데이터센터 유휴 (Tom's Hardware)</a> · <a href="https://www.sixthtone.com/news/1017242">Sixth Tone</a> · <a href="https://www.fpri.org/article/2025/09/from-vouchers-to-visas-chinas-innovative-plan-for-ai-dominance/">FPRI</a></li>
+    <li><a href="https://news.ycwb.com/2024-06/17/content_52750272.htm">신 회사법 해설</a> · <a href="https://www.zhonglun.com/upload/file/20240207/1707293197988003698.pdf">중론 로펌 PDF</a></li>
+    <li><a href="https://www.opcquan.com/news/cmo8dhw0q00008jqeyxrgrt7z">OPC 커뮤니티 143곳 백서</a> · <a href="https://opc.fiime.cn/en/guides/guide_dbc326250b8772eb">정책 획일화·공실 조사</a> · <a href="https://www.theepochtimes.com/china/chinas-ai-one-person-company-push-faces-oversupply-concerns-6085577">Epoch Times (편향 주의)</a></li>
+    <li><a href="https://www.hankyung.com/article/202609206101i">한국경제</a> · <a href="https://mobile.newsis.com/view/NISX20260323_0003559962">뉴시스</a> · <a href="https://scmp.com/tech/article/3347416/openclaw-government-support-fuels-rise-one-person-companies-china">SCMP: OpenClaw</a></li>
+  </ul></details>
+</section>
+
+</div>
+
+</body>
+</html>
